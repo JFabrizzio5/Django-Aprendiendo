@@ -1,12 +1,46 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Mi Template</title>
+
+    <title>Mi Aplicación Python con Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+    <style>
+        /* Estilos CSS aquí */
+    </style>
 </head>
 <body>
-    <h1>Funcionaa {{mensaje}}
+    <div id="app">
+        <div class="header">
+            <h1>Mi Aplicacion Python con Vue.js</h1>
+        </div>
 
-    </h1>
-    
+        <div class="content">
+            <!-- Campo de texto vinculado a la variable 'mensaje' -->
+            <input type="text" v-model="mensaje2">
+            <h1 type="text" v-model="mensaje2">hola</h1>
+                
+            <!-- Muestra el valor de la variable 'mensaje' -->
+            <h2>Funciona: {{ mensaje }}</h2>
+            <h2 v-model="mensaje2"></h2>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2023 Mi Aplicacion Python con Vue.js. Todos los derechos reservados.</p>
+    </div>
+
+    <script>
+        // Crea una nueva instancia de Vue
+        const app = Vue.createApp({
+            data() {
+                return {
+                    mensaje2: '¡Hola, mundo desde Vue.js 3!'
+                };
+            }
+        });
+
+        // Monta la instancia de Vue en el elemento con el ID "app"
+        app.mount('#app');
+    </script>
 </body>
 </html>
